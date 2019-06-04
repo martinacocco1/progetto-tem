@@ -1,23 +1,36 @@
 float planetAngle = 0;
+PImage bg;
 
 void setup() {
   size(300, 270);
+  bg = loadImage("sky-lights-space-dark.jpg");
 }
 
 void draw() {
   background(0);
+  image(bg, 0, 0);
   
-   // disegno della traiettoria-ellisse del pianeta
  fill(0, 0, 0, 100);  
  stroke(255);
  ellipse(150, 130, 200, 210);
+ ellipse(140, 120, 180, 160);
+ ellipse(150, 130, 230, 210);
 
-  // disegno del sole al centro 
+ 
   translate(width/2, height/2);
   fill(250, 236, 164);
   ellipse(0, 0, 70, 70);
   
-  // pianeta che gira attorno al sole
+  fill(188, 234, 255);
+  ellipse(50, 40, 10, 10);
+  
+    fill(252, 232, 194);
+  ellipse(-90, -50, 30, 30);
+  
+      fill(242, 122, 146);
+  ellipse(90, 50, 20, 20);
+  
+
   pushMatrix();
   rotate(planetAngle); 
   translate(100, 0);
